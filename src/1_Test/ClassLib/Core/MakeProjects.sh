@@ -6,7 +6,7 @@ MakeProject() {
     cd "${SlnName}"
     dotnet new sln -n "${SlnName}"
     LibName=MyLib
-    dotnet new classlib -n "${LibName}"
+    dotnet new classlib -n "${LibName}" -f netcoreapp2.2
     TestName=${LibName}.Test
     dotnet new nunit -n "${TestName}"
 
